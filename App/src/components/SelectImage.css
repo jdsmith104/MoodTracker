@@ -1,0 +1,23 @@
+.moodContainer {
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 50%;
+  
+  justify-content: center;
+}
+
+.moodContainer p {
+  font-size: 16px;
+  line-height: 22px;
+  color: red;
+  margin: 0;
+}
+
+.moodContainer a {
+  text-decoration: none;
+}
+
+.moodContainer .mood{
+  width: 200px;
+}

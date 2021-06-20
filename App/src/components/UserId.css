@@ -1,0 +1,15 @@
+.UserId strong{
+    font-size: 20pt;
+}
+
+.UserId #test{
+    border: solid black 2px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+
+.UserId{
+    margin-left: 10px;
+    margin-right: 10px;
+}
