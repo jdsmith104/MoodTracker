@@ -10,7 +10,7 @@ interface ContainerProps {
 
 
 
-const MoodChart: React.FC<ContainerProps> = ({ userId: userId, updateChart: updateChart, setUpdateChart: setUpdateChart }) => {
+const MoodChart: React.FC<ContainerProps> = ({ userId, updateChart, setUpdateChart }) => {
     function getChartData(userId: string) {
         // Get x and y data from database for a user
         // format and return data

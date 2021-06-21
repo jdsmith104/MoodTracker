@@ -1,6 +1,5 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { useState, useEffect } from "react";
-import ExploreContainer from '../components/ExploreContainer';
+import { useState } from "react";
 import UserId from '../components/UserId';
 import SubmitButton from '../components/SubmitButton';
 import MoodChart from '../components/MoodChart';
@@ -12,8 +11,6 @@ interface ContainerProps {
 }
 
 const Tab2: React.FC<ContainerProps> = ({ user: userId, setUser: setUserId }) => {
-
-  const [mood, setMood] = useState(0);
 
   const [updateChart, setUpdateChart] = useState(false);
 

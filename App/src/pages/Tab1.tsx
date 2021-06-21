@@ -1,9 +1,10 @@
-import { IonContent, IonHeader, IonLabel, IonPage, IonTitle, IonToolbar, IonTabButton, IonIcon, IonList, IonItem } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { useState, useEffect } from "react";
 import UserId from '../components/UserId';
 import SubmitButton from '../components/SubmitButton';
 import InteractArea from '../components/InteractArea'
 import './Tab1.css';
+import { test } from '../backend/database'
 
 interface ContainerProps {
   user: string;
@@ -21,7 +22,9 @@ const Tab1: React.FC<ContainerProps> = ({ user: userId, setUser: setUserId }) =>
     //post mood value
     console.log("User", userId);
     //make post request
-    //change tab
+    const dateTime = Date();
+    console.log(dateTime);
+    test();
   }
 
   // To access the most updated value of mood

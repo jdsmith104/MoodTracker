@@ -1,6 +1,4 @@
 import { IonList, IonItem, IonRadioGroup, IonRadio } from '@ionic/react';
-import { codeDownloadSharp } from 'ionicons/icons';
-import { useEffect } from 'react';
 import SelectImage from './SelectImage';
 
 interface ContainerProps {
@@ -8,7 +6,7 @@ interface ContainerProps {
     mood: number;
 }
 
-const InteractArea: React.FC<ContainerProps> = ({ setMood: setMoodFunc, mood: mood }) => {
+const InteractArea: React.FC<ContainerProps> = ({ setMood: setMoodFunc, mood }) => {
     function updateMood(e: any) {
         console.log(e);
         // get new value
@@ -28,7 +26,7 @@ const InteractArea: React.FC<ContainerProps> = ({ setMood: setMoodFunc, mood: mo
                     <SelectImage moodRef={1} />
                     <IonRadio value={1}></IonRadio>
                 </IonItem>
-                <IonItem >
+                <IonItem>
                     <SelectImage moodRef={2} />
                     <IonRadio value={2}></IonRadio>
                 </IonItem>
