@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ExploreContainer from '../components/ExploreContainer';
 import UserId from '../components/UserId';
 import SubmitButton from '../components/SubmitButton';
-import Chart from '../components/Chart';
+import MoodChart from '../components/MoodChart';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
@@ -13,6 +13,7 @@ const Tab2: React.FC = () => {
 
   const [updateChart, setUpdateChart] = useState(false);
 
+  // Function used SubmitButton to modularise the component
   function refresh() {
     setUpdateChart(true);
   }
@@ -27,11 +28,11 @@ const Tab2: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">Results</IonTitle>
           </IonToolbar>
         </IonHeader>
         <UserId setUserId={setUserId} userId={userId}></UserId>
-        <Chart userId={userId} updateChart={updateChart} setUpdateChart={setUpdateChart}></Chart>
+        <MoodChart userId={userId} updateChart={updateChart} setUpdateChart={setUpdateChart}></MoodChart>
         <div className="buttonArea">
           <SubmitButton submit={refresh} value="Refresh"></SubmitButton>
         </div>
