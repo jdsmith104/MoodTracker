@@ -5,11 +5,15 @@ import SubmitButton from '../components/SubmitButton';
 import InteractArea from '../components/InteractArea'
 import './Tab1.css';
 
+interface ContainerProps {
+  user: string;
+  setUser: Function;
+}
 
-const Tab1: React.FC = () => {
+const Tab1: React.FC<ContainerProps> = ({ user: userId, setUser: setUserId }) => {
 
   const [mood, setMood] = useState(0);
-  const [userId, setUserId] = useState("-");
+  // const [userId, setUserId] = useState("-");
 
   function submit() {
     // Get state of Interact area

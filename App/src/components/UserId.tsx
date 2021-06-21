@@ -16,7 +16,7 @@ const UserId: React.FC<ContainerProps> = ({ setUserId: setUserId, userId: userId
     return (
         <div className="UserId">
             <strong> Username</strong>
-            <IonInput type={"text"} id="test" name="UserId" onIonChange={e => updateUserId(e)}></IonInput>
+            <IonInput type={"text"} id="test" name="UserId" value={userId} onIonChange={e => updateUserId(e)}></IonInput>
         </div>
     );
 };

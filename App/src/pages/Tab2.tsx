@@ -6,10 +6,14 @@ import SubmitButton from '../components/SubmitButton';
 import MoodChart from '../components/MoodChart';
 import './Tab2.css';
 
-const Tab2: React.FC = () => {
+interface ContainerProps {
+  user: string;
+  setUser: Function;
+}
+
+const Tab2: React.FC<ContainerProps> = ({ user: userId, setUser: setUserId }) => {
 
   const [mood, setMood] = useState(0);
-  const [userId, setUserId] = useState("");
 
   const [updateChart, setUpdateChart] = useState(false);
 
