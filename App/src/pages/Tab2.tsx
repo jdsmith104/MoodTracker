@@ -9,16 +9,12 @@ import './Tab2.css';
 const Tab2: React.FC = () => {
 
   const [mood, setMood] = useState(0);
-  const [userId, setUserId] = useState("-");
+  const [userId, setUserId] = useState("");
 
+  const [updateChart, setUpdateChart] = useState(false);
 
   function refresh() {
-    // Get state of Interact area
-    console.log("Mood:", mood);
-    //post mood value
-    console.log("User", userId);
-    //make post request
-    //change tab
+    setUpdateChart(true);
   }
 
   return (
@@ -35,7 +31,7 @@ const Tab2: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <UserId setUserId={setUserId} userId={userId}></UserId>
-        <Chart userId={userId}></Chart>
+        <Chart userId={userId} updateChart={updateChart} setUpdateChart={setUpdateChart}></Chart>
         <div className="buttonArea">
           <SubmitButton submit={refresh} value="Refresh"></SubmitButton>
         </div>

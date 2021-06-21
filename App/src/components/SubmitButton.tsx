@@ -7,6 +7,10 @@ interface ContainerProps {
 }
 
 const SubmitButton: React.FC<ContainerProps> = ({ submit: submitFunction, value: value }) => {
+    function updateValue() {
+        value = value + "1";
+        console.log(value);
+    }
     return (
         <IonButton onClick={submitFunction}>{value}</IonButton>
     );
