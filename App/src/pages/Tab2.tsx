@@ -37,7 +37,7 @@ const Tab2: React.FC = () => {
         <UserId setUserId={setUserId} userId={userId}></UserId>
         <Chart userId={userId}></Chart>
         <div className="buttonArea">
-          <SubmitButton submit={refresh}></SubmitButton>
+          <SubmitButton submit={refresh} value="Refresh"></SubmitButton>
         </div>
       </IonContent>
     </IonPage>

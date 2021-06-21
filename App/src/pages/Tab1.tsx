@@ -42,7 +42,7 @@ const Tab1: React.FC = () => {
         <UserId setUserId={setUserId} userId={userId}></UserId>
         <InteractArea setMood={setMood} mood={mood}></InteractArea>
         <div className="buttonArea">
-          <SubmitButton submit={submit}></SubmitButton>
+          <SubmitButton submit={submit} value={"Submit"}></SubmitButton>
         </div>
       </IonContent>
     </IonPage >

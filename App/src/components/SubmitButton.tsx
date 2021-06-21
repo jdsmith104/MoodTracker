@@ -3,11 +3,12 @@ import './SubmitButton.css';
 
 interface ContainerProps {
     submit: () => void;
+    value: string;
 }
 
-const SubmitButton: React.FC<ContainerProps> = ({ submit: submitFunction }) => {
+const SubmitButton: React.FC<ContainerProps> = ({ submit: submitFunction, value: value }) => {
     return (
-        <IonButton onClick={submitFunction}>Submit</IonButton>
+        <IonButton onClick={submitFunction}>{value}</IonButton>
     );
 };
 
