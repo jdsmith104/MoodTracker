@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ExploreContainer from '../components/ExploreContainer';
 import UserId from '../components/UserId';
 import SubmitButton from '../components/SubmitButton';
-import InteractArea from '../components/InteractArea'
+import Chart from '../components/Chart';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
@@ -35,7 +35,7 @@ const Tab2: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <UserId setUserId={setUserId} userId={userId}></UserId>
-        <p>TEST</p>
+        <Chart userId={userId}></Chart>
         <div className="buttonArea">
           <SubmitButton submit={refresh}></SubmitButton>
         </div>
